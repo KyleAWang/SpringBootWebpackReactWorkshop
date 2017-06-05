@@ -4,7 +4,7 @@ Backend: Spring Boot
 Frontend: React, Redux
 Package tools: Maven, Webpack
 
-Run mvn spring-boot:run in project folder can start it. 
+Running mvn spring-boot:run in project folder can start it. 
 
 homepage: http://localhost:8080
 
