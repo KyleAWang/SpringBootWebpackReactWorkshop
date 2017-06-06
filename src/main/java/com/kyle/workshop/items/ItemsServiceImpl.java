@@ -23,15 +23,4 @@ public class ItemsServiceImpl implements ItemsService {
         List<ItemDTO> list = new ArrayList<>(ItemsResolver.getItems().values());
         return list;
     }
-
-    @Override
-    public ItemDTO updateItem(ItemDTO item) {
-        return ItemsResolver.updateItem(item);
-    }
-
-    @Override
-    public boolean isItemExist(long id) {
-        return ItemsResolver.isItemExist(id);
-    }
-
 }

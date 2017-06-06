@@ -7,6 +7,4 @@ import java.util.List;
  */
 public interface ItemsService {
     List<ItemDTO> getItems();
-    ItemDTO updateItem(ItemDTO item);
-    boolean isItemExist(long id);
 }

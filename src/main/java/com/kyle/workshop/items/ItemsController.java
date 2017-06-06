@@ -29,19 +29,6 @@ public class ItemsController {
         return itemsService.getItems();
     }
 
-    @RequestMapping(value = "/api/item/{id}", method = RequestMethod.PUT)
-    public ResponseEntity updateItem(@PathVariable("id") long id, @RequestBody ItemDTO item) {
-        if (logger.isInfoEnabled()) {
-            logger.info("Update item with id: ", id);
-        }
-        if (itemsService.isItemExist(id)) {
-            ItemDTO newItem = itemsService.updateItem(item);
-            return new ResponseEntity<ItemDTO>(newItem, HttpStatus.OK);
-        } else {
-            return new ResponseEntity(new ItemErrorType("Unable to update. Item with id:" + id + " not found"), HttpStatus.NOT_FOUND);
-        }
-    }
-
     @RequestMapping(value = "/api/items/order", method = RequestMethod.POST)
     public ResponseEntity placeOrder(@RequestBody OrderItemDTO[] orderArray) {
         if (logger.isInfoEnabled()) {

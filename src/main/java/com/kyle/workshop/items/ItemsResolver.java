@@ -36,21 +36,4 @@ public class ItemsResolver {
         }
         return items;
     }
-
-    public static ItemDTO updateItem(ItemDTO item){
-        if (items != null && items.get(item.getId()) != null){
-            items.put(item.getId(), item);
-            return items.get(item.getId());
-        } else {
-            return null;
-        }
-    }
-
-    public static boolean isItemExist(long id){
-        if (items != null && items.get(id) != null){
-            return true;
-        } else {
-            return false;
-        }
-    }
 }
